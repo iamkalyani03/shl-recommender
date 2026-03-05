@@ -1,0 +1,214 @@
+/* =========================
+GLOBAL
+========================= */
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+MAIN CONTAINER
+========================= */
+
+.app-container {
+  width: 100%;
+  max-width: 1000px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+
+  border-radius: 18px;
+  padding: 35px 40px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  color: white;
+}
+
+/* =========================
+TITLE
+========================= */
+
+.app-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  background: linear-gradient(90deg,#60a5fa,#a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+INPUT AREA
+========================= */
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+
+  flex: 1;
+  padding: 16px 18px;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 15px;
+
+  background: rgba(255,255,255,0.08);
+  color: white;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 0 0 2px #60a5fa;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+button {
+  padding: 16px 26px;
+
+  background: linear-gradient(90deg,#3b82f6,#6366f1);
+  border: none;
+
+  border-radius: 10px;
+
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: all 0.25s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.4);
+}
+
+/* =========================
+RESULT GRID
+========================= */
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* =========================
+CARD
+========================= */
+
+.result-card {
+
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all 0.25s;
+
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.result-card:hover {
+
+  transform: translateY(-4px);
+
+  background: rgba(255,255,255,0.1);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* =========================
+TEXT AREA
+========================= */
+
+.result-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.score {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* =========================
+LINK BUTTON
+========================= */
+
+.result-link {
+
+  padding: 10px 16px;
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  background: #3b82f6;
+  color: white;
+
+  transition: 0.2s;
+}
+
+.result-link:hover {
+  background: #2563eb;
+}
+
+/* =========================
+SPINNER
+========================= */
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* =========================
+EMPTY TEXT
+========================= */
+
+.empty {
+  text-align: center;
+  margin-top: 30px;
+  color: #94a3b8;
+}
