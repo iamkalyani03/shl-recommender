@@ -29,4 +29,4 @@ with open(CSV_FILE,"w",newline="",encoding="utf-8") as f:
         for rec in recs:
             writer.writerow([query, rec["assessment_url"]])
 
-print(f"✅ CSV generated: {CSV_FILE}")
+print(f"CSV generated: {CSV_FILE}")

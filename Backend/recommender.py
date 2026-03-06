@@ -74,7 +74,7 @@ def search(query, top_k=10):
         ascending=False
     )
 
-    # 🔥 If behavioral skills exist, force include top personality tests
+    #  If behavioral skills exist, force include top personality tests
     if behavioral:
 
         personality_pool = df[df["test_type"] == "P"].copy()
